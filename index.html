@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="js/jquery-3.3.1.js"></script>
     <script src="js/logic.js"></script>
     <script src="js/interface.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <meta charset="utf-8">
     <title>Katz's Cat Sanctuary</title>
   </head>
@@ -11,25 +13,49 @@
   <div class="container">
     <header>
       <img src='assets/logo.svg'>
-      <h1>Katz's Cat Sanctuary</h1>
-      <h3>Central Cat-a-base</h3>
+      <div class='tagline'>
+        <h1>Katz's Cat Sanctuary</h1>
+        <h3>Central Cat-a-base</h3>
+      </div>
     </header>
     <body>
-      <div class='filter-bar-closed'>
+      <div class='filter-memo'>
         <h4 class="showing-results">Showing Results by: All</h4>
         <p class="filter-tag">Filter</p>
       </div>
 
-      <div class="filter-bar-open">
-        <form>
-          <select name="breed" size="4">
+      <div class="filter-bar">
+          <select id='breed' name="breed" size="4">
             <option value="Tabby">Tabby</option>
             <option value="Aegean">Aegean</option>
             <option value="American Curl">American Curl</option>
             <option value="Dwarf cat">Dwarf cat</option>
           </select>
-          <button type="submit" name="search">Filter Cats</button>
-        </form>
+          <select id='country' name="country" size="4">
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Italy">Italy</option>
+          </select>
+          <select id='origin' name="origin" size="4">
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Italy">Italy</option>
+          </select>
+          <select id='coat' name="coat" size="4">
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Italy">Italy</option>
+          </select>
+          <select id='pattern' name="pattern" size="4">
+            <option value="USA">USA</option>
+            <option value="Germany">Germany</option>
+            <option value="France">France</option>
+            <option value="Italy">Italy</option>
+          </select>
+          <button id='search' onClick="filterCats('breed', 'country', 'origin', 'coat', 'pattern')" name="search">Filter Cats</button>
       </div>
 
         <div class='cat-card'>

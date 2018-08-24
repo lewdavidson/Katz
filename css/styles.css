@@ -1,0 +1,51 @@
+/*header styles */
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  background-color: red;
+}
+
+header img {
+  max-height: 100px;
+  padding-right: 1%;
+  align-self: center;
+}
+
+.tagline {
+  font-family: 'Oswald', sans-serif;
+  align-self: center;
+}
+
+.tagline h1 {
+  margin: 0;
+  font-size: 60px;
+}
+
+.tagline h3 {
+  margin: 0;
+  font-size: 30px;
+  padding-left: 6%;
+}
+
+/* filter bar styles */
+
+.filter-memo {
+  background-color: green;
+}
+
+.filter-memo h4 {
+  margin: 0;
+}
+
+.filter-bar {
+  background-color: blue;
+  display: none;
+}
+
+.open-bar {
+  display: block;
+}
