@@ -26,37 +26,22 @@
       </div>
 
       <div class='filter-bar'>
-          <select id='breed' name='breed' size='4'>
-            <option value='Tabby'>Tabby</option>
-            <option value='Aegean'>Aegean</option>
-            <option value='American Curl'>American Curl</option>
-            <option value='Dwarf cat'>Dwarf cat</option>
+          <select id='breed-selection' name='breed'>
+            <option value=" ">Breed</option>
           </select>
-          <select id='country' name='country' size='4'>
-            <option value='USA'>USA</option>
-            <option value='Germany'>Germany</option>
-            <option value='France'>France</option>
-            <option value='Italy'>Italy</option>
+          <select id='country-selection' name='country'>
+            <option value=''>Country</option>
           </select>
-          <select id='origin' name='origin' size='4'>
-            <option value='USA'>USA</option>
-            <option value='Germany'>Germany</option>
-            <option value='France'>France</option>
-            <option value='Italy'>Italy</option>
+          <select id='origin-selection' name='origin'>
+            <option value=''>Origin</option>
           </select>
-          <select id='coat' name='coat' size='4'>
-            <option value='USA'>USA</option>
-            <option value='Germany'>Germany</option>
-            <option value='France'>France</option>
-            <option value='Italy'>Italy</option>
+          <select id='coat-selection' name='coat'>
+            <option value=''>Coat</option>
           </select>
-          <select id='pattern' name='pattern' size='4'>
-            <option value='USA'>USA</option>
-            <option value='Germany'>Germany</option>
-            <option value='France'>France</option>
-            <option value='Italy'>Italy</option>
+          <select id='pattern-selection' name='pattern'>
+            <option value=''>Pattern</option>
           </select>
-          <button id='search' onClick='filterCats('breed', 'country', 'origin', 'coat', 'pattern')' name='search'>Filter Cats</button>
+          <button id='search' onClick='filterCats(breed-selection, country, origin, coat,pattern)' name='search'>Filter Cats</button>
       </div>
 
         <div id='cat-card-list'>
