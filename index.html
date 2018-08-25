@@ -26,29 +26,30 @@
       </div>
 
       <div class='filter-bar'>
-          <select id='breed-selection' name='breed'>
+        <p>Filter By Breed</p>
+          <select id='breed' name='breed'>
             <option value=" ">Breed</option>
           </select>
-          <select id='country-selection' name='country'>
+
+          <p>Or filter by other data</p>
+
+          <select id='country' name='country'>
             <option value=''>Country</option>
           </select>
-          <select id='origin-selection' name='origin'>
+          <select id='origin' name='origin'>
             <option value=''>Origin</option>
           </select>
-          <select id='coat-selection' name='coat'>
+          <select id='coat' name='coat'>
             <option value=''>Coat</option>
           </select>
-          <select id='pattern-selection' name='pattern'>
+          <select id='pattern' name='pattern'>
             <option value=''>Pattern</option>
           </select>
-          <button id='search' onClick='filterCats(breed-selection, country, origin, coat,pattern)' name='search'>Filter Cats</button>
+          <button id='search' onClick='filterCats(breed, country, origin, coat, pattern)' name='search'>Filter Cats</button>
       </div>
 
         <div id='cat-card-list'>
-
         </div>
-        <div id='page-number'></div>
-        <button type="button" onClick='nextPage()' name="button">More Results</button>
     </body>
   </div>
 </html>
