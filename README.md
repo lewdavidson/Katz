@@ -25,6 +25,16 @@
 - Eliminate duplicate options in dropdown menus. For the dropdowns, I pulled in values for each specific key, leading to duplicate values in my dropdowns. My best guess to solve this would be to push the JSON objects into and array first and create a mapped array to compare the values?
 - The ability to 'adopt' one of the cats, ie remove the result from displaying in future queries. Again, this could have been solved potentially by storing results locally and assigning each object a unique ID, which then can be targeted individually and deleted.
 
+## UI/UX Design Focus
+
+Since this app was to be used for mobile, I wanted to be sure that everything was large enough and easy to press with a finger or read on a small screen. I made sure to only display information or buttons to users only when they would be helpful or make sense.
+
+Example:
+- The 'More Filters' button is only available when the user is displaying all possible cats.
+- The 'Show All' button is only available to the user when they are viewing a specific filtered result.
+
+The dropdown menus were chosen because I feel that is what the user is familiar with and expects on mobile. It also allows the options to be larger and easier to scroll through.
+
 ## Tech Used
 
 I tried to use as much vanilla JavaScript as possible, supplementing some jQuery for DOM manipulation. I used only CSS for the styling. For the cat data I used the [Cat Facts API](https://catfact.ninja/#!/Breeds/breed).
