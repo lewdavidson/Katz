@@ -25,17 +25,20 @@ $(document).ready(function(){
     });
   });
 
-  $('.filter-tag').click(function(){
+  $('#filter-tag').click(function(){
     $('.filter-bar').toggleClass('open-bar');
     $("#breed").val('breed');
     $("#coat").val('coat');
     $("#country").val('country');
     $("#origin").val('origin');
     $("#pattern").val('pattern');
+    $( '#cat-result-display').empty();
+    $('.filter-memo').hide();
   });
 
   $('#search').click(function(){
     $('.filter-bar').toggleClass('open-bar');
+    $('.filter-memo').show();
   });
 
 });
@@ -44,4 +47,6 @@ function showAll() {
   $( '#cat-result-display').hide();
   $( "#cat-card-list" ).show();
   $( '#show-all').hide();
+  $('#filter-tag').show();
+  $('#results-by').html('All')
 };

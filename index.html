@@ -6,33 +6,31 @@
     <script type="text/javascript" src='js/logic.js'></script>
     <link rel='stylesheet' href='css/styles.css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <meta charset='utf-8'>
-    <title>Katz's Cat Sanctuary</title>
+    <title>Katz's Central Cat-a-base</title>
   </head>
 
   <div class='container'>
     <header>
       <img src='assets/logo.svg'>
       <div class='tagline'>
-        <h1>Katz's Cat Sanctuary</h1>
-        <h3>Central Cat-a-base</h3>
+        <h1>Katz's Cat-a-Base</h1>
+        <h3>A collection of data on every cat I own!</h3>
       </div>
     </header>
     <body>
       <div class='filter-memo'>
         <h4 class='showing-results'>Showing Results by: <span id='results-by'><span></h4>
-        <button id='show-all' onclick='showAll()'>Show all Cats</button>
-        <p class='filter-tag'>Filter</p>
+        <button id='filter-tag'>More Filters</button>
+        <button id='show-all' onclick='showAll()'>Show all</button>
       </div>
 
       <div class='filter-bar'>
-        <p>Filter By Breed</p>
+        <p id='filter-bar-lead'>Filter Your Results down a little further by choosing one of the options below!</p>
           <select id='breed' name='breed'>
             <option value='breed'>Breed</option>
           </select>
-
-          <p>Or filter by other data</p>
-
           <select id='country' name='country'>
             <option value='country'>Country</option>
           </select>
@@ -48,9 +46,9 @@
           <button id='search' onClick='filterCats(breed, country, origin, coat, pattern)' name='search'>Filter Cats</button>
       </div>
 
-      <div id='cat-result-display'>
-      </div>
-        <div id='cat-card-list'>
+        <div id='cat-card-list' class='cards'>
+        </div>
+        <div id='cat-result-display' class='cards'>
         </div>
     </body>
   </div>

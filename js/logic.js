@@ -1,7 +1,8 @@
 function filterCats(breed, country, origin, coat, pattern) {
-  $( '#cat-result-display').empty();
   $( "#cat-card-list" ).hide();
+  $ ('#cat-result-display').show();
   $( '#show-all').show();
+  $( '#filter-tag').hide();
   var breedResult = document.getElementById('breed');
   var countryResult = document.getElementById('country');
   var originResult = document.getElementById('origin');
@@ -16,7 +17,7 @@ function filterCats(breed, country, origin, coat, pattern) {
       info.forEach(function(item){
         var breed = item.breed;
         if(breed === breedSearch) {
-          $('#cat-result-display').append('<div>' + "<img id='cat-pic' src='https://api.thecatapi.com/v1/images/search?format=src&mime_types=image'>" + '</img>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
+          $('#cat-result-display').append('<div>'+ '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
           $('#results-by').html('Breed: ' + breedSearch);
         };
       });
@@ -31,7 +32,7 @@ function filterCats(breed, country, origin, coat, pattern) {
       info.forEach(function(item){
         var country = item.country;
         if(country === countrySearch) {
-          $('#cat-result-display').append('<div>' + "<img id='cat-pic' src='https://api.thecatapi.com/v1/images/search?format=src&mime_types=image'>" + '</img>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
+          $('#cat-result-display').append('<div>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
           $('#results-by').html('Country: ' + countrySearch);
         };
       });
@@ -46,7 +47,7 @@ function filterCats(breed, country, origin, coat, pattern) {
       info.forEach(function(item){
         var coat = item.coat;
         if(coat === coatSearch) {
-          $('#cat-result-display').append( '<div>' + "<img id='cat-pic' src='https://api.thecatapi.com/v1/images/search?format=src&mime_types=image'>" + '</img>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
+          $('#cat-result-display').append( '<div>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
           $('#results-by').html('Coat: ' + coatSearch);
         };
       });
@@ -61,7 +62,7 @@ function filterCats(breed, country, origin, coat, pattern) {
       info.forEach(function(item){
         var origin = item.origin;
         if(origin === originSearch) {
-          $('#cat-result-display').append('<div>' + "<img id='cat-pic' src='https://api.thecatapi.com/v1/images/search?format=src&mime_types=image'>" + '</img>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>' );
+          $('#cat-result-display').append('<div>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>' );
           $('#results-by').html('Origin: ' + originSearch);
         };
       });
@@ -76,7 +77,7 @@ function filterCats(breed, country, origin, coat, pattern) {
       info.forEach(function(item){
         var pattern = item.pattern;
         if(pattern === patternSearch) {
-          $('#cat-result-display').append('<div>' + "<img id='cat-pic' src='https://api.thecatapi.com/v1/images/search?format=src&mime_types=image'>" + '</img>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
+          $('#cat-result-display').append('<div>' + '<ul>' + '<li>' + 'Breed: ' + item.breed + '</li>' + '<li>' + 'Country: ' + item.country + '</li>' + '<li>' + 'Origin: ' + item.origin + '</li>' + '<li>' + 'Coat: ' + item.coat + '</li>' + '<li>' + 'Pattern: '+ item.pattern + '</li>' + '</ul>' + '</div>');
           $('#results-by').html('Origin: ' + originSearch);
         };
       });
