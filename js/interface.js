@@ -10,9 +10,7 @@ $(document).ready(function(){
       var origin = item.origin;
       var coat = item.coat;
       var pattern = item.pattern;
-
-
-      $('#cat-card-list').append('<ul>' + '<li>' + 'Breed: ' + breed + '</li>' + '<li>' + 'Country: ' + country + '</li>' + '<li>' + 'Origin: ' + origin + '</li>' + '<li>' + 'Coat: ' + coat + '</li>' + '<li>' + 'Pattern: '+ pattern + '</li>' + '</ul>');
+      $('#cat-card-list').append('<div>' + '<ul>' + '<li>' + 'Breed: ' + breed + '</li>' + '<li>' + 'Country: ' + country + '</li>' + '<li>' + 'Origin: ' + origin + '</li>' + '<li>' + 'Coat: ' + coat + '</li>' + '<li>' + 'Pattern: '+ pattern + '</li>' + '</ul>' + '</div>');
 
       $( '#show-all').hide();
       $('#results-by').html('All')
