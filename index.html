@@ -3,6 +3,7 @@
   <head>
     <script type="text/javascript" src='js/jquery-3.3.1.js'></script>
     <script type="text/javascript" src='js/interface.js'></script>
+    <script type="text/javascript" src='js/logic.js'></script>
     <link rel='stylesheet' href='css/styles.css'>
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
     <meta charset='utf-8'>
@@ -19,7 +20,8 @@
     </header>
     <body>
       <div class='filter-memo'>
-        <h4 class='showing-results'>Showing Results by: All</h4>
+        <h4 class='showing-results'>Showing Results by: <span id='results-by'><span></h4>
+        <button id='show-all' onclick='showAll()'>Show all Cats</button>
         <p class='filter-tag'>Filter</p>
       </div>
 
@@ -32,20 +34,22 @@
           <p>Or filter by other data</p>
 
           <select id='country' name='country'>
-            <option value=''>Country</option>
+            <option value='country'>Country</option>
           </select>
           <select id='origin' name='origin'>
-            <option value=''>Origin</option>
+            <option value='origin'>Origin</option>
           </select>
           <select id='coat' name='coat'>
-            <option value=''>Coat</option>
+            <option value='coat'>Coat</option>
           </select>
           <select id='pattern' name='pattern'>
-            <option value=''>Pattern</option>
+            <option value='pattern'>Pattern</option>
           </select>
           <button id='search' onClick='filterCats(breed, country, origin, coat, pattern)' name='search'>Filter Cats</button>
       </div>
 
+      <div id='cat-result-display'>
+      </div>
         <div id='cat-card-list'>
         </div>
     </body>
